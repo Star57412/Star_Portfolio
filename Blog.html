@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!---Font Awesome CDN------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!---Google Fonts------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alata&family=Niconne&family=Pacifico&display=swap" rel="stylesheet">
+
+   <style>
+    body{
+        font-family: 'Cabin', sans-serif;
+    }
+    h1{
+        color: red;
+    }
+    hr{
+        background: aqua;
+        width: 150px;
+        margin: 15px auto;
+        height: 5px !important;
+    }
+    h3{
+        font-weight: bold;
+    }
+   .navbar-nav .nav-item {
+    margin-right: 150px;    /* Adjust the margin as needed */
+    }
+    .navbar-nav {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px; 
+      display: flex;
+      }
+     #S404 .navbar-brand{
+      font-family: 'Pacifico', cursive;
+      font-size: 25px; 
+      }
+      
+        /*Lets design Icons */
+i{
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #108178;
+}
+</style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-danger fw-bold">
+      <div class="container" id="S404">
+          <a class="navbar-brand text-light" href="#">S T A R</a>
+          <!-- Toggle button for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto justify-content-center mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="Blog.html">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="Services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="About.html">About</a>
+                  </li>
+              </ul>
+          
+          <div class="mx-2">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+          </div>
+        </div>
+      </div>
+     
+  </nav>
+
+
+    <!--Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login to STAR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row justify-content-center">
+         <!-----Icon Start-->
+        <svg class="mx-auto my-3" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
+         <!-----Icon End-->
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            <a href="#passwordModal"  data-bs-toggle="modal" class="nav-link" target="_blank">Forget Password?</a>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--SignUp Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Get An STAR Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row justify-content-center">
+              <!-----Icon Start-->
+        <svg class="mx-auto my-3" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
+         <!-----Icon End-->
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="starexampleInputPassword1" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="starexampleInputPassword1">
+            <a href="#alreadyModal" data-bs-toggle="modal" class="nav-link">Already have an Account?</a>
+          </div>
+          
+         
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Password Modal -->
+<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Get An New Password</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row justify-content-center">
+         
+        <!-----Icon Start-->
+        <svg class="mx-auto my-3" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
+
+         <!-----Icon End-->
+        <form>
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">New Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="starexampleInputPassword1" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="starexampleInputPassword1">
+            
+          </div>
+          
+         
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--Already Modal -->
+<div class="modal fade" id="alreadyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login to STAR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row justify-content-center">
+         <!-----Icon Start-->
+        <svg class="mx-auto my-3" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
+         <!-----Icon End-->
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section>
+        <div class="container">
+                <br>
+                <br>
+                <br>
+               <h1 class="text-center mt-3 display-3 fw-bold">Our Blogs</h1>
+                <hr>
+                <p class="text-center text-muted">My all blogs are here.</p>
+               <div class="row my-5">
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="python.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">Python is a versatile, high-level language with clean syntax. It excels in web development, data analysis, AI, and is beginner-friendly.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="java.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">Java is a robust, object-oriented language favored for its platform independence. It's used extensively in Android app development and enterprise software.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="c++.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">C++ is a powerful, object-oriented language, building on C. It excels in performance-critical tasks like game development and system programming.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="swift.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">Swift is Apple's intuitive, safe, and high-performance language for iOS and macOS app development. Its modern syntax and tools enhance productivity.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="go.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">Go, or Golang, is an efficient, statically typed language created by Google. Known for simplicity and performance, it's ideal for building scalable systems.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="ruby.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">Ruby is a dynamic, elegant language, valued for its simplicity and productivity. It's often used in web development with Ruby on Rails.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="asp.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">ASP.NET is a robust web framework by Microsoft, facilitating dynamic, scalable web applications. It supports various languages and is ideal for enterprise-level projects.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="php.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">PHP is a popular server-side scripting language for web development, offering dynamic content creation. It's known for its flexibility and wide usage in website construction.</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+                <div class="col-12 col-sm-6 col-md-4 m-auto">
+                <div class="card border-0 shadow text-center my-3">
+                   <div class="card-body">
+                    <img src="node.jpeg"  height="220px" width="335px" alt="logo">
+                    <!------Icon------->
+                    <p class="card-text mb-auto my-2">Node.js is a server-side runtime built on Chrome's V8 JavaScript engine. It allows non-blocking, event-driven I/O, making it efficient for scalable and real-time web applications..</p>
+                   </div>
+                   <h3><a href="#" class="btn btn-primary float-start">Continue Reading</a></h3>
+                   <!------Card Body End----------->
+                </div>
+                 <!------Card End---------->
+                </div>
+               <!----Col End-------->
+            </div>
+            <!----Row End-------->
+        </div>
+        <!---Container End---->
+    </section>
+       <!---Section End---->
+
+
+       <footer>
+        <div class="bg-light text-dark pt-5 pb-4">
+            <div class="container text-center text-md-left">
+                <div class="row text-center text-md-left">
+                    
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                         <h5 class="text-uppercase mb-4 font-weight-bold text-info">Learn</h5>
+                         <hr class="mb-4">
+                         <p>
+                         <i class="fa-brands fa-python" style="font-size: 20px;"></i>&nbsp;Python</a>
+                         </p>
+                         <p>
+                          <i class="fa-solid fa-code" style="font-size: 20px;"></i>&nbsp;Asp.net</a>
+                         </p>
+                         <p>
+                          <i class="fa-brands fa-php" style="font-size: 20px;"></i>&nbsp;Php</a>
+                         </p>
+                    </div>
+    
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                         <h5 class="text-uppercase mb-4 font-weight-bold text-info">Developers</h5>
+                         <hr class="mb-4">
+                         <p>
+                            <a href="#" class="text-dark" style="text-decoration: none;">Web Development</a>
+                         </p>
+                         <p>
+                            <a href="#" class="text-dark" style="text-decoration: none;">App Development</a>
+                         </p>
+                         <p>
+                            <a href="#" class="text-dark" style="text-decoration: none;">Networking</a>
+                         </p>
+                         <p>
+                            <a href="#" class="text-dark" style="text-decoration: none;">Wordpress</a>
+                         </p>
+                    </div>
+    
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                         <h5 class="text-uppercase mb-4 font-weight-bold text-info">Contact Us</h5>
+                         <hr class="mb-4">
+                         <p>
+                           <li class="fas fa-home mr-3" style="font-size: 20px;"></li>&nbsp; Basti, India
+                         </p>
+                         <p>
+                           <li class="fas fa-envelope mr-3" style="font-size: 20px;"></li>&nbsp;star@gmail.com
+                         </p>
+                         <p>
+                          <li class="fa-brands fa-github mr-3" style="font-size: 20px;"></li>&nbsp;S7412
+                         </p>
+                         <p>
+                           <li class="fab fa-facebook" style="font-size: 20px;"></li>&nbsp;SV-732-734
+                         </p>
+                       
+                    </div>
+    
+                    <hr class="mb-4">
+                    <div class="row d-flex justify-content-center">
+                        <div>
+                            <p>
+                                Copyright &copy; 2023 All Rights Reserved By: STAR
+                                <a href="#" style="text-decoration: none;">
+                                    <strong class="text-info">Information Technology</strong>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="row d-flex justify-content-center">
+                          <div class="text-center">
+    
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-dark"><i class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                          </div>
+                        <div>
+    
+                        </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
